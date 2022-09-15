@@ -21,7 +21,11 @@ it "returns the number of words in the contents as an integer" do
     expect(entry.count_words).to eq 6
 end
 
-
+it "returns an integer representing an estimate of the reading time in minutes" do
+    entry = DiaryEntry.new("wednesday","the internet stopped working")
+    result = entry.reading_time(10)
+    expect(result).to eq 2.5
+end
 
 
 end

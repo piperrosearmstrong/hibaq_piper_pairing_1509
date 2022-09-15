@@ -18,5 +18,10 @@ def count_words
    return count
 end
 
+def reading_time(wpm)
+   count = @contents.split.size
+   result = count / wpm
+   return result.to_f
+end
 
 end
